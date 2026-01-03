@@ -1,17 +1,9 @@
-
+import HomePage from '../sections/homepage'
 import './App.css'
 
 function App() {
-  
-
   return (
-    
-      <div>
-        <h1 className="text-3xl font-bold text-red-500 underline">
-        Tailwind v4 is working!
-        </h1>
-      </div>
-      
+    <HomePage/>
   )
 }
 
