@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FounderSection } from "../components/founders_section";
 import Layout from "../components/layout";
 import {MapSection} from "../components/getdirections";

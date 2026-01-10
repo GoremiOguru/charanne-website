@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Plus, Minus } from "lucide-react";
 
 export function FounderSection() {
@@ -18,7 +18,7 @@ export function FounderSection() {
             <img 
               src="/founder-portrait.webp" 
               alt="Founders of Charanne Limited"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+              className="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700 ease-in-out"
               loading="lazy"
             />
           </div>
@@ -39,8 +39,8 @@ export function FounderSection() {
 
           <div className="space-y-4">
             <div className="flex flex-col">
-              <p className="font-black text-slate-900 uppercase tracking-widest text-sm">Founder Name</p>
-              <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em] mt-1 font-bold">Managing Director & CEO</p>
+              <p className="font-black text-slate-900 uppercase tracking-widest text-sm">Charles Ugochukwu Uruakpa</p>
+              <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em] mt-1 font-bold">CEO & Founder</p>
             </div>
 
             {/* Expandable Bio Section */}
@@ -55,7 +55,7 @@ export function FounderSection() {
 
               <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                 <p className="text-slate-600 text-sm leading-relaxed space-y-4">
-                  With over 15 years of experience in the construction and logistics sector, [Founder Name] established Charanne Limited to solve a critical gap in the West African market: the availability of world-class building materials paired with bespoke luxury interiors. 
+                  With over 20 years of combined experience in the construction and logistics sector, Mr. Charles Ugochukwu Uruakpa and Mrs. Anne Charles Uruakpa established Charanne Limited to solve a critical gap in the West African market: the availability of world-class building materials paired with bespoke luxury interiors. 
                   <br /><br />
                   Under their leadership, the company has become a trusted partner for developers and homeowners alike, ensuring every project—from industrial builds to luxury residences—is executed with precision and elegance.
                 </p>

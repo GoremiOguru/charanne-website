@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import type { ReactNode } from 'react';
 import { Menu, X } from 'lucide-react'; 
+
 
 
 interface LayoutProps {
@@ -21,19 +22,20 @@ const Layout = ({ children }: LayoutProps) => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Supplies', href: '#materials' },
-    { name: 'Interiors', href: '#interiors' },
-    { name: 'Our Process', href: '#our-process' },
+    { name: 'Our Products', href: '/productcarousel' },
+    { name: 'Our Process', href: '/our-process' },
     { name: 'About us', href: '/about' },
   ];
+
+
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans">
       
       {/* HEADER */}
-      <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-lg border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+      <header className="fixed top-0 left-0 z-50 w-full bg-white border-b border-slate-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-20">
             
             {/* Logo */}
             <Link 
@@ -74,9 +76,11 @@ const Layout = ({ children }: LayoutProps) => {
 
             {/* Actions & Mobile Toggle */}
             <div className="flex items-center gap-2">
-              <button className="hidden sm:block px-5 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-slate-900 hover:bg-slate-900 hover:text-white transition-all">
-                Quote
-              </button>
+          <Link to="/inquiryform">
+  <button className="hidden sm:block px-5 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-slate-900 hover:bg-slate-900 hover:text-white transition-all">
+    Send Inquiry
+  </button>
+</Link>
               
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -91,9 +95,10 @@ const Layout = ({ children }: LayoutProps) => {
 
         {/* MOBILE MENU OVERLAY */}
         <div className={`
-          lg:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 transition-all duration-300 ease-in-out overflow-hidden
-          ${isMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible'}
-        `}>
+    lg:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 
+    transition-all duration-300 ease-in-out overflow-hidden
+    ${isMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible'}
+  `}>
           <nav className="flex flex-col p-6 space-y-4 bg-white">
             {navLinks.map((link) => {
               const isInternalPage = link.href.startsWith('/');
@@ -120,12 +125,13 @@ const Layout = ({ children }: LayoutProps) => {
               );
             })}
             <div className="pt-4 flex flex-col gap-3">
+              <Link to="/inquiryform">
               <button 
-              onClick={handleWhatsAppClick}
           
               className="w-full py-4 text-xs font-black uppercase tracking-widest bg-red-600 text-white rounded-sm">
                 Design Inquiry
               </button>
+              </Link>
               <button 
                onClick={handleWhatsAppClick}
               className="w-full py-4 text-xs font-black uppercase tracking-widest border-2 border-slate-900 text-slate-900 rounded-sm">
@@ -137,7 +143,7 @@ const Layout = ({ children }: LayoutProps) => {
       </header>
 
       {/* MAIN CONTENT Area */}
-      <main className="grow w-full">
+      <main className="grow w-full pt-20">
         {children}
       </main>
 
@@ -175,7 +181,7 @@ const Layout = ({ children }: LayoutProps) => {
 
             <div className="bg-slate-900/50 p-8 rounded-sm border border-slate-800">
               <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-[0.2em]">Get in Touch With us</h4>
-              <p className="text-brand-highlight font-black text-xl mb-2 text-red-500">+234 (0) 803 356 2978</p>
+              <p className="text-brand-highlight font-black text-xl mb-2 text-red-500">+234 (0) 803 356 2978<br/> +234 (0) 806 242 0252<br/>+234 (0) 902 277 5839 </p>
               <p className="text-xs opacity-60 leading-relaxed uppercase tracking-widest">
                 MKK plaza, opposite Gudu Market FCT Abuja
               </p>

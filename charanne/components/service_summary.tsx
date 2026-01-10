@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 const RotatingSummary = () => {
   const Service_summary = [
@@ -19,7 +19,7 @@ const RotatingSummary = () => {
   return (
     <div className="relative max-w-3xl mx-auto px-4">
       {/* Container with a fixed minimum height to prevent layout shift */}
-      <div className="min-h-[140px] md:min-h-[100px] flex items-center border-l-4 border-red-600 pl-6">
+      <div className="min-h-35 md:min-h-25 flex items-center border-l-4 border-red-600 pl-6">
         <p
           key={currentIndex}
           className="text-lg md:text-xl text-slate-600 leading-relaxed italic animate-fade-in"
